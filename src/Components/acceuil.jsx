@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import myImageInSrc from "./imageInSrc.jpg";
+import VideoUrl from "./myVideo.mp4";
 
 
 const Acceuil = () => {
-    return (<>
-        <div style={{border:"solid 1px black",maxWidth:"100vw"}}>
+    return (<div style={{textAlign:"center",marginTop:"20px",justifyContent:"center"}}>
+        <div style={{border:"solid 1px black",maxWidth:"100vw",textAlign:"center"}}>
 
             <h1 className="title red">Gharbi Leith</h1>
 
@@ -17,12 +18,9 @@ const Acceuil = () => {
 
         </div>
 
-        <video width="320" height="240" controls  autoPlay controls>
-            <source src="./myVideo.mp4" type="video/mp4" />
-            <source src="./myVideo.ogv" type="video/mp4" />
-        </video>
+        <video  src={VideoUrl} width="600" height="300" controls="controls" autoplay="true" />
 
-    </>);
+    </div>);
 }
 
 export default Acceuil;
